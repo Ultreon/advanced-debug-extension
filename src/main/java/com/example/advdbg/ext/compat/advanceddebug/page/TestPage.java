@@ -1,23 +1,23 @@
-package com.ultreon.mods.advanceddebugextension.compat.advanceddebug.page;
+package com.example.advdbg.ext.compat.advanceddebug.page;
 
-import com.mojang.blaze3d.vertex.PoseStack;
 import com.ultreon.mods.advanceddebug.api.client.menu.DebugPage;
 import com.ultreon.mods.advanceddebug.api.client.menu.IDebugRenderContext;
-import com.ultreon.mods.advanceddebugextension.Main;
-import com.ultreon.mods.advanceddebugextension.common.Foo;
+import com.example.advdbg.ext.util.Foo;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
 public class TestPage extends DebugPage {
     public TestPage() {
-        super(Main.MOD_ID, "test");
+        super();
     }
 
     @Override
-    public void render(PoseStack poseStack, IDebugRenderContext ctx) {
+    public void render(@NotNull GuiGraphics gfx, IDebugRenderContext ctx) {
         ctx.left("Example empty left string.");
         ctx.left("Example left entry (string)", "String Value LOL");
         ctx.left("Example left entry (int)", 123456789);

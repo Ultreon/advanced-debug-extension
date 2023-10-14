@@ -1,0 +1,6 @@
+{
+  "package": "com.example.advdbg.ext.mixins",
+  "client": [
+    "ExampleMixin"
+  ]
+}
