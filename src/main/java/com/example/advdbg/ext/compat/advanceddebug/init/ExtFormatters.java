@@ -11,7 +11,7 @@ import com.example.advdbg.ext.util.Foo;
 public class ExtFormatters {
     private static final IFormatterRegistry REGISTRY = IAdvancedDebug.get().getFormatterRegistry();
 
-    public static final IFormatter<Foo> FOO = REGISTRY.register(new Formatter<Foo>(Foo.class, ExampleExtensionMod.res("foo")) {
+    public static final IFormatter<Foo> FOO = REGISTRY.register(new Formatter<Foo>(Foo.class, ExampleExtensionMod.id("foo")) {
         @Override
         public void format(Foo foo, IFormatterContext ctx) {
             ctx.classValue(Foo.class).operator(": ").stringEscaped(foo.bar()).operator(" ").intValue(foo.baz());

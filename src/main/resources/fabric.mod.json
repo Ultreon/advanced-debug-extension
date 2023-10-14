@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "advanced_debug_ext",
+  "version": "${version}",
+  "name": "Advanced Debug Extension",
+  "description": "Example Advanced Debug extension for MC.",
+  "authors": [
+    "ExampleModAuthor"
+  ],
+  "contributors": [
+  ],
+  "contact": {
+    "homepage": "https://example.com/"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.advdbg.ext.ExampleExtensionMod"
+    ]
+  },
+  "mixins": [
+    "example_ext.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "1.20.1",
+    "advanced_debug": ">=2.4 <2.5"
+  }
+}
